@@ -1068,6 +1068,11 @@ img {
 
 /* === MODAL FORM === */
 .modal {
+  /* замінив */
+  /* max-width: 320px; */
+  max-width: 288px;
+  /* width: 288px; */
+  height: 623px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1076,7 +1081,8 @@ img {
   min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  padding: 72px 24px 24px 24px;
+  /* change */
+  padding: 72px 16px 24px 16px;
   box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -1197,7 +1203,8 @@ img {
 /* CHECKBOX */
 .form-checkbox {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 /* CHECKED STATE */
@@ -1248,6 +1255,7 @@ img {
 /* SUBMIT BUTTON */
 .modal-submit {
   margin-top: 24px;
+  margin-bottom: 24px;
   align-self: center;
   width: 169px;
   height: 56px;
@@ -1303,4 +1311,11 @@ img {
 .modal-close:hover svg,
 .modal-close:focus svg {
   fill: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 408px;
+    padding: 72px 24px 24px 24px;
+  }
 }
