@@ -53,7 +53,7 @@ img {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    padding: 0 15px;
+    /* padding: 0 15px; */
   }
 }
 
@@ -325,9 +325,9 @@ img {
 }
 
 .present {
+  display: block;
   max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 72px 0;
   text-align: center;
   background-image:
@@ -402,6 +402,16 @@ img {
     max-width: 496px;
     margin: 0 auto 48px;
     font-size: 56px;
+  }
+}
+
+/* image 2x */
+
+@media (min-width: 1158px) and (min-resolution: 2dppx) {
+  .present {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/background-image-1440@2x.jpg");
   }
 }
 
@@ -784,7 +794,6 @@ img {
 
 .page-footer {
   padding: 96px 0;
-
   background-color: #2e2f42;
 }
 
@@ -922,7 +931,6 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  font-weight: 500;
   color: #ffffff;
   text-align: center;
   cursor: pointer;
@@ -939,6 +947,14 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    margin-left: 108px;
+  }
+
   .footer-bloc {
     justify-content: center;
     display: flex;
@@ -962,10 +978,6 @@ img {
 
   .footer-social-text {
     display: block;
-  }
-  .footer-social-container {
-    display: flex;
-    justify-content: center;
   }
 
   .subscribe-form {
@@ -1068,9 +1080,7 @@ img {
 /* === MODAL FORM === */
 .modal {
   /* замінив */
-  /* max-width: 320px; */
-  max-width: 288px;
-  /* width: 288px; */
+  max-width: 300px;
   height: 623px;
   position: absolute;
   top: 50%;
@@ -1262,7 +1272,6 @@ img {
   color: #fff;
   border: none;
   border-radius: 4px;
-  font-weight: 500;
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
