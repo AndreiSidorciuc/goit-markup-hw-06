@@ -529,6 +529,7 @@ img {
 .work-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 72px 24px;
 }
 
@@ -599,11 +600,13 @@ img {
 @media screen and (min-width: 768px) {
   .work-list {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 
-  .work-item {
-    width: calc((100% - 72px) / 2);
-  }
+  /* .work-item {
+    width: calc((100% - 24px) / 2);
+  } */
 }
 
 @media screen and (min-width: 1158px) {
