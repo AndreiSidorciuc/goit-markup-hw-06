@@ -603,10 +603,6 @@ img {
     flex-wrap: wrap;
     flex-direction: row;
   }
-
-  /* .work-item {
-    width: calc((100% - 24px) / 2);
-  } */
 }
 
 @media screen and (min-width: 1158px) {
