@@ -130,12 +130,6 @@ img {
     margin-right: 120px;
   }
 
-  .nav-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-  }
-
   .nav-link {
     display: block;
     position: relative;
@@ -372,14 +366,6 @@ img {
   background-color: #404bbf;
 }
 
-@media (min-width: 320px) and (min-resolution: 2dppx) {
-  .present {
-    background-image:
-      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url("../images/hero-bg-mobile@2x.jpg");
-  }
-}
-
 @media screen and (min-width: 768px) {
   .present {
     max-width: 768px;
@@ -397,7 +383,7 @@ img {
   }
 }
 
-@media (min-width: 768px) and (min-resolution: 2dppx) {
+@media (min-resolution: 2dppx) {
   .present {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -423,7 +409,7 @@ img {
 
 /* image 2x */
 
-@media (min-width: 1158px) and (min-resolution: 2dppx) {
+@media (min-resolution: 2dppx) {
   .present {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -654,33 +640,14 @@ img {
 
   .work-item {
     width: calc((100% - 72px) / 4);
-    background-color: #fff;
-    border-radius: 0 0 4px 4px;
-    box-shadow:
-      0 2px 1px rgba(46, 47, 66, 0.08),
-      0 1px 1px rgba(46, 47, 66, 0.16),
-      0 1px 6px rgba(46, 47, 66, 0.08);
   }
 
   .work-present-text {
     padding: 32px 16px;
   }
 
-  .work-text {
-    margin-bottom: 8px;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #2e2f42;
-  }
-
   .work-text-profession {
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-align: center;
     padding-bottom: 8px;
   }
 
@@ -688,33 +655,6 @@ img {
     display: flex;
     justify-content: center;
     gap: 24px;
-  }
-
-  .social-link {
-    width: 40px;
-    height: 40px;
-    background-color: #4d5ae5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .social-link:hover,
-  .social-link:focus {
-    background-color: #404bbf;
-  }
-
-  .social-link svg {
-    fill: #f4f4fd;
-  }
-
-  .social-link:hover svg,
-  .social-link:focus svg {
-    fill: #ffffff;
   }
 }
 
@@ -993,7 +933,7 @@ img {
   }
 
   .footer-social-text {
-    display: block;
+    justify-content: flex-start;
   }
 
   .subscribe-form {
@@ -1043,15 +983,6 @@ img {
 
   .footer-logo .logo-part {
     color: #f4f4fd;
-  }
-
-  .footer-social-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #fff;
-    margin-bottom: 16px;
   }
 
   /* === FOOTER SUBSCRIBE FORM === */
@@ -1319,9 +1250,9 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.modal-close,
+.modal-close:hover,
+.modal-close:focus,
 .mobile-menu-close:hover,
-.modal-close,
 .mobile-menu-close:focus {
   background-color: #404bbf;
   border-color: #404bbf;
