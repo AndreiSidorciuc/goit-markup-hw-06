@@ -279,6 +279,12 @@ img {
   font-style: normal;
 }
 
+.mobile-menu-link,
+.mobile-menu-contacts-link,
+.mobile-menu-phone-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .mobile-menu-phone-link {
   color: #4d5ae5;
 }
@@ -440,7 +446,7 @@ img {
   padding: 96px 0;
 }
 
-/* .features-list:not(:last-child) { */
+/* .features-list { */
 /* display: задається браузером за замовчанням */
 /* display: flex; */
 /* flex-direction: column; */
@@ -449,10 +455,16 @@ img {
 /* } */
 
 /* Як приклад можна робити таким чином */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .features-list:not(:last-child) {
     margin-bottom: 72px;
   }
+} */
+
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .features-text {
@@ -474,11 +486,11 @@ img {
 }
 
 /* Як приклад можна робити таким чином */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .features-text-info {
     margin-bottom: 72px;
   }
-}
+} */
 
 .visually-hidden {
   position: absolute;
@@ -496,7 +508,6 @@ img {
 @media screen and (min-width: 768px) {
   .features-list {
     display: flex;
-    flex-wrap: wrap;
     row-gap: 72px;
     column-gap: 24px;
   }
@@ -942,8 +953,9 @@ img {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: baseline;
-    margin-left: 108px;
+    justify-content: flex-start;
+    padding-left: 108px;
+    padding-right: 108px;
   }
 
   .footer-bloc {
@@ -988,10 +1000,12 @@ img {
     display: flex;
     align-items: baseline;
     margin: 0 auto;
+    padding: 0;
   }
 
   .footer-bloc {
     gap: 120px;
+    margin: 0 auto;
   }
 
   .logo-container {
@@ -1001,12 +1015,8 @@ img {
   }
 
   .footer-social-container {
-    margin-left: 80px;
+    justify-content: flex-start;
   }
-
-  /* .footer-social-container {
-    margin-left: auto;
-  } */
 
   .footer-logo {
     display: inline-block;
@@ -1220,11 +1230,17 @@ img {
   align-items: center;
   justify-content: center;
   background-color: transparent;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-custom svg {
+  width: 10px;
+  height: 8px;
   fill: #ffffff;
   opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Group policy */
