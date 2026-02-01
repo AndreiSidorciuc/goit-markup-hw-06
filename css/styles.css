@@ -261,10 +261,6 @@ img {
   color: #404bbf;
 }
 
-.mobile-menu-contacts-link {
-  color: #4d5ae5;
-}
-
 .mobile-menu-address {
   margin-bottom: 48px;
 }
@@ -273,13 +269,18 @@ img {
   padding-bottom: 24px;
 }
 
-.mobile-menu-contacts-link {
+.mobile-menu-contacts-link,
+.mobile-menu-phone-link {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
   font-style: normal;
+}
+
+.mobile-menu-phone-link {
+  color: #4d5ae5;
 }
 
 .mobile-menu-contacts-link:hover,
@@ -337,6 +338,11 @@ img {
 }
 
 @media (min-resolution: 2dppx) {
+  .present {
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url("../images/hero-bg-mobile@2x.jpg");
+  }
 }
 
 .present-text {
@@ -491,17 +497,18 @@ img {
   .features-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 72px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 
   .features-item {
-    width: calc((100% - 72px) / 2);
+    width: calc((100% - 24px) / 2);
   }
 
   .features-text {
     line-height: 1.2;
     letter-spacing: 0.02em;
-    text-align: justify;
+    text-align: left;
   }
 }
 
@@ -518,7 +525,6 @@ img {
     background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
-    /* width: 264px; */
     width: 100%;
     height: 112px;
     display: flex;
@@ -733,13 +739,6 @@ img {
   transform: translateY(0);
 }
 
-/* .portfolio-item:hover {
-  box-shadow:
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-    0px 2px 1px rgba(46, 47, 66, 0.08);
-} */
-
 .portfolio-text-container {
   padding: 32px 16px;
   border-radius: 0 0 4px 4px;
@@ -771,6 +770,14 @@ img {
 @media screen and (min-width: 1158px) {
   .portfolio-item {
     width: calc((100% - 48px) / 3);
+    box-shadow: none;
+  }
+
+  .portfolio-item:hover {
+    box-shadow:
+      0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16),
+      0px 2px 1px rgba(46, 47, 66, 0.08);
   }
 }
 
@@ -936,7 +943,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: baseline;
-    /* margin-left: 108px; */
+    margin-left: 108px;
   }
 
   .footer-bloc {
@@ -1090,7 +1097,7 @@ img {
 
 .modal-checkbox {
   margin-top: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-icon {
@@ -1154,6 +1161,7 @@ img {
   width: 100%;
   height: 120px;
   padding: 8px 16px;
+  margin-bottom: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   font-size: 12px;
@@ -1162,6 +1170,13 @@ img {
   color: rgba(46, 47, 66, 0.4);
   resize: none;
   outline: none;
+}
+
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .form-textarea:focus {
