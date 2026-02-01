@@ -446,21 +446,6 @@ img {
   padding: 96px 0;
 }
 
-/* .features-list { */
-/* display: задається браузером за замовчанням */
-/* display: flex; */
-/* flex-direction: column; */
-/* gap: 72px 16px; */
-/* margin-bottom: 72px; */
-/* } */
-
-/* Як приклад можна робити таким чином */
-/* @media screen and (max-width: 767px) {
-  .features-list:not(:last-child) {
-    margin-bottom: 72px;
-  }
-} */
-
 .features-list {
   display: flex;
   flex-wrap: wrap;
@@ -482,15 +467,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  /* margin-bottom: 72px; */
 }
-
-/* Як приклад можна робити таким чином */
-/* @media screen and (max-width: 767px) {
-  .features-text-info {
-    margin-bottom: 72px;
-  }
-} */
 
 .visually-hidden {
   position: absolute;
@@ -1079,7 +1056,6 @@ img {
   min-height: 584px;
   background-color: #fcfcfc;
   border-radius: 4px;
-  /* change */
   padding: 72px 16px 24px 16px;
   box-shadow:
     0px 1px 1px rgba(0, 0, 0, 0.14),
