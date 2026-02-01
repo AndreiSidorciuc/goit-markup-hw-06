@@ -53,7 +53,7 @@ img {
 @media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
-    /* padding: 0 15px; */
+    padding: 0 15px;
   }
 }
 
@@ -261,6 +261,10 @@ img {
   color: #404bbf;
 }
 
+.mobile-menu-contacts-link {
+  color: #4d5ae5;
+}
+
 .mobile-menu-address {
   margin-bottom: 48px;
 }
@@ -332,6 +336,9 @@ img {
   background-size: cover;
 }
 
+@media (min-resolution: 2dppx) {
+}
+
 .present-text {
   max-width: 216px;
   margin: 0 auto 72px;
@@ -383,7 +390,7 @@ img {
   }
 }
 
-@media (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .present {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -409,7 +416,7 @@ img {
 
 /* image 2x */
 
-@media (min-resolution: 2dppx) {
+@media screen and (min-width: 1158px) and (min-resolution: 2dppx) {
   .present {
     background-image:
       linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
@@ -427,10 +434,19 @@ img {
   padding: 96px 0;
 }
 
-.features-list {
-  display: flex;
-  flex-direction: column;
-  gap: 72px 16px;
+/* .features-list:not(:last-child) { */
+/* display: задається браузером за замовчанням */
+/* display: flex; */
+/* flex-direction: column; */
+/* gap: 72px 16px; */
+/* margin-bottom: 72px; */
+/* } */
+
+/* Як приклад можна робити таким чином */
+@media screen and (max-width: 767px) {
+  .features-list:not(:last-child) {
+    margin-bottom: 72px;
+  }
 }
 
 .features-text {
@@ -448,6 +464,14 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  /* margin-bottom: 72px; */
+}
+
+/* Як приклад можна робити таким чином */
+@media screen and (max-width: 767px) {
+  .features-text-info {
+    margin-bottom: 72px;
+  }
 }
 
 .visually-hidden {
@@ -465,7 +489,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .features-list {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     gap: 72px;
   }
@@ -487,7 +511,6 @@ img {
   }
 
   .features-list {
-    display: flex;
     gap: 24px;
   }
 
@@ -495,7 +518,8 @@ img {
     background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
-    width: 264px;
+    /* width: 264px; */
+    width: 100%;
     height: 112px;
     display: flex;
     align-items: center;
@@ -676,6 +700,10 @@ img {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-thumb {
@@ -705,12 +733,12 @@ img {
   transform: translateY(0);
 }
 
-.portfolio-item:hover {
+/* .portfolio-item:hover {
   box-shadow:
     0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
-}
+} */
 
 .portfolio-text-container {
   padding: 32px 16px;
@@ -755,7 +783,6 @@ img {
 
 .footer-container {
   display: block;
-  align-items: center;
 }
 
 .footer-logo {
@@ -836,14 +863,15 @@ img {
 }
 
 .subscribe-label {
+  width: 288px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
 }
 
 .subscribe-input {
   display: block;
-  width: 264px;
+  width: 100%;
   height: 40px;
   padding: 8px 16px;
   font-size: 12px;
@@ -878,7 +906,7 @@ img {
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
   padding: 8px 24px;
   height: 40px;
   background-color: #4d5ae5;
@@ -908,7 +936,7 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: baseline;
-    margin-left: 108px;
+    /* margin-left: 108px; */
   }
 
   .footer-bloc {
@@ -923,17 +951,18 @@ img {
     display: block;
   }
 
+  .subscribe-label {
+    width: 264px;
+  }
+
   .footer-social-container-media {
     display: block;
   }
 
   .footer-social-text {
+    justify-content: flex-start;
     margin: 0 auto;
     margin-bottom: 16px;
-  }
-
-  .footer-social-text {
-    justify-content: flex-start;
   }
 
   .subscribe-form {
@@ -955,7 +984,7 @@ img {
   }
 
   .footer-bloc {
-    gap: 80px;
+    gap: 120px;
   }
 
   .logo-container {
@@ -965,16 +994,12 @@ img {
   }
 
   .footer-social-container {
-    margin: 0;
+    margin-left: 80px;
   }
 
-  .footer-social-container:last-child {
+  /* .footer-social-container {
     margin-left: auto;
-  }
-
-  .footer-container > div:nth-child(1) {
-    margin-right: 120px;
-  }
+  } */
 
   .footer-logo {
     display: inline-block;
@@ -1066,19 +1091,6 @@ img {
 .modal-checkbox {
   margin-top: 16px;
   margin-bottom: 24px;
-}
-
-.modal-textarea {
-  width: 100%;
-  height: 120px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  padding: 8px 16px;
-  resize: none;
 }
 
 .modal-icon {
